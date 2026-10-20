@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================
+   BRAND TOKENS — change these to rebrand
+   ============================================ */
+@theme {
+  /* Brand colors */
+  --color-primary: #e8590c;        /* saffron */
+  --color-primary-hover: #c2410c;
+  --color-primary-soft: #fff1e6;
+  --color-secondary: #7a1e2e;      /* deep maroon */
+  --color-secondary-hover: #5c1622;
+  --color-accent: #d4a017;         /* temple gold */
+  --color-cosmic: #1b1640;         /* night sky */
+  --color-cosmic-light: #2d2566;
+
+  /* Neutral colors */
+  --color-background: #fffaf3;     /* warm cream */
+  --color-surface: #ffffff;
+  --color-ink: #2a1f1a;            /* main text */
+  --color-muted: #6b5e55;          /* secondary text */
+  --color-line: #eadfcf;           /* borders */
+
+  /* Shape and depth */
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 4px 24px -8px rgb(122 30 46 / 0.15);
 }
 
+/* Fonts are loaded in layout.tsx, connected here */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-heading: var(--font-tiro), serif;
+  --font-body: var(--font-mukta), system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-body);
 }
