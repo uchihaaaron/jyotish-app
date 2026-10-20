@@ -72,7 +72,10 @@ export default function StyleguidePage() {
             <Card className="border-cosmic-light bg-cosmic text-white">
               <h3 className="font-heading text-2xl text-accent">Your Kundali</h3>
               <p className="mt-2 text-white/70">Discover what the planets say about you.</p>
-              <Button variant="outline" className="mt-6 border-accent text-accent hover:bg-cosmic-light">
+              <Button
+                variant="outline"
+                className="mt-6 border-accent text-accent hover:bg-cosmic-light"
+              >
                 Generate
               </Button>
             </Card>
